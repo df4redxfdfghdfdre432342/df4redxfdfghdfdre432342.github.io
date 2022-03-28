@@ -1,0 +1,61 @@
+
+.mint-nfts__item p {
+    text-align: left;
+}
+
+.mint-image {
+    height: 200px;
+}
+
+.mint-label {
+    display: block;
+    width:100%;
+    height:36px;
+    line-height:36px;
+    margin-top:30px;
+    border-radius:40px;
+    background-color:#fff;
+    color: grey;
+}
+
+.mint-button {
+    display: block;
+    width:100%;
+    height:36px;
+    line-height:36px;
+    margin-top:30px;
+}
+
+.mint-input {
+    display: block;
+    width:100%;
+    height:30px;
+    line-height:30px;
+    margin-top:30px;
+    border-radius:8px;
+    background-color:#fff;
+    color: grey;
+}
+
+.mint-content {
+    margin: 14px 10px;
+}
+
+
+.v_dark .box_wrap {
+    background-color: #0c241d;
+    border-radius: 10px;
+}
+
+.navbar-expand-lg .navbar-nav>li>.nav-link.active::before {
+    height: 2px;
+}
+
+.navbar-expand-lg .navbar-nav>li>.nav-link.active::before, .single_roadmap.roadmap_done .roadmap_icon, .rd_complete .roadmap_icon, .roadmap_box.current .roadmap_inner, .roadmap .owl-nav i:hover, .box_roadmap .roadmap_inner::after, .tab-link.active, .tab-link.active:hover, .tab-link:hover, .v_light_dark .tab-link.active, .v_light_dark .tab-link.active:hover, .v_light_dark .tab-link:hover, .v_royal_blue .tab-link.active, .v_royal_blue .tab-link.active:hover, .v_royal_blue .tab-link:hover, .tab_nav_s4 li.nav-item a.active, .timeline_box.complete .timeline_circle::before, .timeline_box.complete::before, .timeline_box.current .timeline_inner, .timeline .owl-nav i:hover {
+    background-color: #cf8079;
+}
+
+.roadmap_box.current .roadmap_inner::before, .timeline_box.current .timeline_inner::before {
+    border-color: transparent transparent #0c241d;
+}
+
