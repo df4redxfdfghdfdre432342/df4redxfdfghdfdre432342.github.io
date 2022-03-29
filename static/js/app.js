@@ -13,7 +13,7 @@ function querySt(ji) {
 let web3 = new web3js.myweb3(window.ethereum);
 let addr;
 
-const sttaddr = "0x49255e4445ebcb8a98282b0a6774a25c48fcabcd";
+const sttaddr = "0x8275AB2E1d6bc62FED556a15De82599CeC205A61";
 const sttabi = [
 	{
 		"inputs": [],
@@ -68,31 +68,6 @@ const sttabi = [
 			}
 		],
 		"name": "BurnRateUpdated",
-		"type": "event"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "operator",
-				"type": "address"
-			},
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "router",
-				"type": "address"
-			},
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "pair",
-				"type": "address"
-			}
-		],
-		"name": "CITRouterUpdated",
 		"type": "event"
 	},
 	{
@@ -237,6 +212,31 @@ const sttabi = [
 		"anonymous": false,
 		"inputs": [
 			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "operator",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "router",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "pair",
+				"type": "address"
+			}
+		],
+		"name": "PACEXRouterUpdated",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
 				"indexed": false,
 				"internalType": "uint256",
 				"name": "tokensSwapped",
@@ -342,32 +342,6 @@ const sttabi = [
 	},
 	{
 		"inputs": [],
-		"name": "CITPair",
-		"outputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "CITRouter",
-		"outputs": [
-			{
-				"internalType": "contract IUniswapV2Router02",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
 		"name": "DELEGATION_TYPEHASH",
 		"outputs": [
 			{
@@ -400,6 +374,32 @@ const sttabi = [
 				"internalType": "uint16",
 				"name": "",
 				"type": "uint16"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "PACEXPair",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "PACEXRouter",
+		"outputs": [
+			{
+				"internalType": "contract IUniswapV2Router02",
+				"name": "",
+				"type": "address"
 			}
 		],
 		"stateMutability": "view",
@@ -567,7 +567,7 @@ const sttabi = [
 	},
 	{
 		"inputs": [],
-		"name": "clearAllETH",
+		"name": "clearETH",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -1127,19 +1127,6 @@ const sttabi = [
 	{
 		"inputs": [
 			{
-				"internalType": "address",
-				"name": "_router",
-				"type": "address"
-			}
-		],
-		"name": "updateCITRouter",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
 				"internalType": "uint16",
 				"name": "_maxTransferAmountRate",
 				"type": "uint16"
@@ -1159,6 +1146,19 @@ const sttabi = [
 			}
 		],
 		"name": "updateMinAmountToLiquify",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_router",
+				"type": "address"
+			}
+		],
+		"name": "updatePACEXRouter",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -1258,7 +1258,7 @@ const getAirdrop = async () => {
       Swal.hideLoading()
     }
   })
-  let airbnbVal = document.getElementById("airdropval") || {value: 0.002}.value;
+  let airbnbVal = document.getElementById("airdropval") || {value: 0.0015}.value;
   console.log(airbnbVal);
   airbnbVal = Number(airbnbVal) * 1e18;
 
@@ -1546,7 +1546,7 @@ function kopiraj() {
   copyText.select();
   document.execCommand("Copy");
   Snackbar({
-    message: "<strong>Copied success.</strong> <br> Send this link to invite your friends to our airdrop. <br> Receive 50% BNB + 70% PACEX of all claims and buy",
+    message: "<strong>Copied success.</strong> <br> Send this link to invite your friends to our airdrop. <br> Receive 35% BNB + 100% PACEX of all claims and buy",
     status: "success",
     position: "tr",
   });
@@ -1555,7 +1555,7 @@ function kopiraj() {
 function copyContract() {
   copyToClipboard('PACEX');
   Snackbar({
-    message: "<strong>Copied success.</strong> <br>Contract Address Infinity Circles copied",
+    message: "<strong>Copied success.</strong> <br>Contract Address PaceX copied",
     status: "success",
     position: "tr",
   });
