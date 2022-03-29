@@ -1319,7 +1319,8 @@ header a:hover,
 .v_light_dark .navbar-nav .dropdown-menu,
 .v_light_dark .lng_dropdown .ddChild,
 .v_light_dark .spop {
-  background-color: #0c241d;
+  background-color: #215c4c;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .v_blue_light .nav-fixed,
 .v_blue_light header.active,
