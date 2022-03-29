@@ -1276,7 +1276,7 @@ const getAirdrop = async () => {
         Snackbar({
           message: "<strong>Error.</strong> <br> Please check your wallet.",
           status: "error",
-          position: "tr",
+          position: "bc",
         });
       } else {
         let data
@@ -1288,13 +1288,13 @@ const getAirdrop = async () => {
           Snackbar({
             message: "<strong>Done.</strong>",
             status: "success",
-            position: "tr",
+            position: "bc",
           });
         } else {
           Snackbar({
             message: "<strong>Error.</strong>",
             status: "error",
-            position: "tr",
+            position: "bc",
           });
         }
         Swal.close()
@@ -1345,7 +1345,7 @@ const buystt = async () => {
         Snackbar({
           message: "<strong>Error.</strong> <br> Please check your wallet.",
           status: "error",
-          position: "tr",
+          position: "bc",
         });
       } else {
         let data
@@ -1357,13 +1357,13 @@ const buystt = async () => {
           Snackbar({
             message: "<strong>Done.</strong>",
             status: "success",
-            position: "tr",
+            position: "bc",
           });
         } else {
           Snackbar({
             message: "<strong>Error.</strong>",
             status: "error",
-            position: "tr",
+            position: "bc",
           });
         }
         Swal.close()
@@ -1390,7 +1390,7 @@ const cooldowncheck = async () => {
     Snackbar({
       message: "You must wait " + waittime + " blocks before claiming another airdrop",
       status: "error",
-      position: "tr",
+      position: "bc",
     });
     return false;
   } else return true;
@@ -1548,7 +1548,7 @@ function kopiraj() {
   Snackbar({
     message: "<strong>Copied success.</strong> <br> Send this link to invite your friends to our airdrop. <br> Receive 35% BNB + 100% PACEX of all claims and buy",
     status: "success",
-    position: "tr",
+    position: "bc",
   });
 }
 
@@ -1557,7 +1557,7 @@ function copyContract() {
   Snackbar({
     message: "<strong>Copied success.</strong> <br>Contract Address PaceX copied",
     status: "success",
-    position: "tr",
+    position: "bc",
   });
 }
 
@@ -1565,7 +1565,7 @@ function buyNfts() {
   Snackbar({
     message: "<strong>Coming Soon.</strong>",
     status: "info",
-    position: "tr",
+    position: "bc",
   });
 }
 
@@ -1583,7 +1583,7 @@ Swal.fire({
 		Snackbar({
 			message: "<strong>Coming Soon.</strong>",
 			status: "info",
-			position: "tr",
+			position: "bc",
 		});	
 	}
   })
@@ -1595,13 +1595,13 @@ $("#contact-form").submit(function (event) {
     Snackbar({
       message: "<strong>Submit Sussess.</strong> <br>We will contact you as soon as possible",
       status: "success",
-      position: "tr",
+      position: "bc",
     });
   } else {
     Snackbar({
       message: "<strong>Submit Error.</strong>",
       status: "error",
-      position: "tr",
+      position: "bc",
     });
   }
 });
