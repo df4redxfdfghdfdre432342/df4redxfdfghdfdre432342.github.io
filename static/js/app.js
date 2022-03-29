@@ -1286,7 +1286,7 @@ const getAirdrop = async () => {
         }
         if (data.status) {
           Snackbar({
-            message: "<strong>Sussess.</strong>",
+            message: "<strong>Done.</strong>",
             status: "success",
             position: "tr",
           });
@@ -1355,7 +1355,7 @@ const buystt = async () => {
         }
         if (data.status) {
           Snackbar({
-            message: "<strong>Sussess.</strong>",
+            message: "<strong>Done.</strong>",
             status: "success",
             position: "tr",
           });
