@@ -59,3 +59,7 @@
     border-color: transparent transparent #0c241d;
 }
 
+@media only screen and (max-width: 991px) {}
+header.fixed-top {
+    position: fixed;
+}
