@@ -59,7 +59,16 @@
     border-color: transparent transparent #0c241d;
 }
 
-@media only screen and (max-width: 991px) {}
-header.fixed-top {
-    position: fixed;
+@media only screen and (max-width: 991px) {
+    header.fixed-top {
+        position: fixed;
+    }
+}
+
+.fixed-top .nav_item img {
+    display: none;
+}
+
+.nav-fixed .nav_item img {
+    display: block;
 }
