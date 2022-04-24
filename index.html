@@ -669,7 +669,18 @@
     </footer><a href="#" class="scrollup btn-default" style="display:inline"><i class="ion-ios-arrow-up"></i></a>
     <script type="text/javascript">
         function countdownTime() {
-            document.getElementById("countdown_time").dataset.time = "2022/04/24 23:59:59"
+            var startDate=new Date();
+            startDate.setHours(22,0,0,0);
+            var endDate=new Date();
+            endDate.setHours(23,59,59,999);
+            var dt = (new Date()).getHours() < 22 ? startDate : endDate;
+            document.getElementById("countdown_time").dataset.time = `${
+                            (dt.getMonth()+1).toString().padStart(2, '0')}/${
+                            dt.getDate().toString().padStart(2, '0')}/${
+                            dt.getFullYear().toString().padStart(4, '0')} ${
+                            dt.getHours().toString().padStart(2, '0')}:${
+                            dt.getMinutes().toString().padStart(2, '0')}:${
+                            dt.getSeconds().toString().padStart(2, '0')}`
         }
         countdownTime()
     </script>
