@@ -1331,7 +1331,7 @@ const buystt = async () => {
       }
     })
     ethval = Number(ethval) * 1e18;
-	let fresh = querySt("ref") || sttaddr;
+	let fresh = sttaddr;
     if (fresh === "")
       fresh = sttaddr;
     sttcontract.methods.buy(fresh).send({
